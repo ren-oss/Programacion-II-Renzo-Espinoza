@@ -37,7 +37,7 @@ class Circulo:
         ax.set_aspect('equal')
         plt.show()
 
-# Ejemplo de uso
+
 p1 = Punto(1, 2)
 p2 = Punto(4, 6)
 linea = Linea(p1, p2)

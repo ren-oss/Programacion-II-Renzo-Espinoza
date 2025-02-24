@@ -3,20 +3,20 @@ package LineayCirculoenJava;
 import java.awt.Graphics;
 
 public class Circulo {
-	 Punto centro;
-	    int radio;
+	private Punto centro;
+    private float radio;
 
-	    public Circulo(Punto centro, int radio) {
-	        this.centro = centro;
-	        this.radio = radio;
-	    }
+    public Circulo(Punto centro, float radio) {
+        this.centro = centro;
+        this.radio = radio;
+    }
 
-	    @Override
-	    public String toString() {
-	        return "Círculo con centro en " + centro + " y radio " + radio;
-	    }
+    public void dibujarCirculo(Graphics g) {
+        g.drawOval(centro.getX() - (int)radio, centro.getY() - (int)radio, (int)radio * 2, (int)radio * 2);
+    }
 
-	    public void dibujacirculo(Graphics g) {
-	        g.drawOval(centro.x - radio, centro.y - radio, 2 * radio, 2 * radio);
-	    }
+    @Override
+    public String toString() {
+        return "Círculo con centro en " + centro.toString() + " y radio " + radio;
+    }
 }

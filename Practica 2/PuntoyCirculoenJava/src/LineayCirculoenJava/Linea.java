@@ -1,19 +1,20 @@
 package LineayCirculoenJava;
-
+import java.awt.Graphics;
 public class Linea {
-	  Punto p1, p2;
+	 private Punto p1;
+	    private Punto p2;
 
 	    public Linea(Punto p1, Punto p2) {
 	        this.p1 = p1;
 	        this.p2 = p2;
 	    }
 
-	    @Override
-	    public String toString() {
-	        return "Linea de " + p1 + " a " + p2;
+	    public void dibujarLinea(Graphics g) {
+	        g.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
 	    }
 
-	    public void dibujalinea(Graphics g) {
-	        g.drawLine(p1.x, p1.y, p2.x, p2.y);
+	    @Override
+	    public String toString() {
+	        return "Linea de " + p1.toString() + " a " + p2.toString();
 	    }
 }	
