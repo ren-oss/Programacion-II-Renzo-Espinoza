@@ -1,8 +1,9 @@
 package LineayCirculoenJava;
-
+import java.util.Scanner;
 import java.awt.Graphics;
 
 public class Circulo {
+    Scanner lee = new Scanner
 	private Punto centro;
     private float radio;
 
