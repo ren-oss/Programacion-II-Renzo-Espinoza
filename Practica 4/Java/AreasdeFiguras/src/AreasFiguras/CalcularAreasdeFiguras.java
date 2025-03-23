@@ -1,10 +1,10 @@
 package AreasFiguras;
-
 public class CalcularAreasdeFiguras {
     // area del ciruclo
 	double area(double radio){
-        return Math.PI * radio * radio;
+        return Math.PI * radio * radio ;
     }
+    
     // area del rectángulo
     double area(float  base, double altura){
         return base * altura;
@@ -20,6 +20,7 @@ public class CalcularAreasdeFiguras {
      double area(double lado, double apotema){
         return (5*lado*apotema) / 2;
      }
+     
      public static void main(String[] args) {
          CalcularAreasdeFiguras f1 = new CalcularAreasdeFiguras();
          CalcularAreasdeFiguras f2 = new CalcularAreasdeFiguras();
@@ -31,5 +32,6 @@ public class CalcularAreasdeFiguras {
 		System.out.println("Triangulo Rectangulo: " +f3.area(2,10.3) );
 		System.out.println("Trapecio: "+ f4.area(2,3));
 		System.out.println("Hexagono: "+ f5.area(2.33,1.55));
+        
      }
 }

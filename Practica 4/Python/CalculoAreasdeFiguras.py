@@ -1,4 +1,5 @@
 import math
+from multimethod import multimethod
 class CalcularArea:
 
     def calcular_area(self, *args):
