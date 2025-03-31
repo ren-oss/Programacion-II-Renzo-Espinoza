@@ -2,20 +2,17 @@ package EstadisticaModular;
 import java.util.Scanner;
 public class MainEstadisticasModular {
 	public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double[] numeros = new double[10];
-
-        System.out.println("Ingrese 10 números:");
-        for (int i = 0; i < 10; i++) {
-            numeros[i] = scanner.nextDouble();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de datos: ");
+        int n = sc.nextInt();
+        double[] datos = new double[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Ingrese el dato " + (i + 1) + ": ");
+            datos[i] = sc.nextDouble();
         }
-
-        double promedio = calcularPromedio(numeros);
-        double desviacion = calcularDesviacion(numeros, promedio);
-
-        System.out.printf("El promedio es %.2f\n", promedio);
-        System.out.printf("La desviación estándar es %.5f\n", desviacion);
-        
-        scanner.close();
-	}
+        double promedio = EstadisticasModular.calcularPromedio(datos);
+        double desviacion = EstadisticasModular.calcularDesviacion(datos, promedio);
+        System.out.println("El promedio es: " + promedio);
+        System.out.println("La desviación estándar es: " + desviacion);
+    }
 }
