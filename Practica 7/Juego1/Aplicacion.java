@@ -11,7 +11,7 @@ public class Aplicacion {
 
         System.out.println("\n=== Juego Solo Números Pares ===");
         juego2.juega();
-
+        
         System.out.println("\n=== Juego Solo Números Impares ===");
         juego3.juega();
     }
