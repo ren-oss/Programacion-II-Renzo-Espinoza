@@ -58,13 +58,39 @@ class JuegoAdivinaNumero(Juego):
                 else:
                     print("El número es menor.")
 
+class JuegoAdivinaPar(JuegoAdivinaNumero):
+    def valida_numero(self, numero):
+        if 0 <= numero <= 10:
+            if numero % 2 == 0:
+                return True
+            else:
+                print("Error: El número no es par.")
+                return False
+        print("Error: Número fuera del rango 0-10.")
+        return False
+
+class JuegoAdivinaImpar(JuegoAdivinaNumero):
+    def valida_numero(self, numero):
+        if 0 <= numero <= 10:
+            if numero % 2 != 0:
+                return True
+            else:
+                print("Error: El número no es impar.")
+                return False
+        print("Error: Número fuera del rango 0-10.")
+        return False
 
 
 def main():
-    print("=== Juego Normal ===")
-    juego1 = JuegoAdivinaNumero(3)
-    juego1.juega()
+   
 
+    print("\n=== Juego Solo Números Pares ===")
+    juego2 = JuegoAdivinaPar(3)
+    juego2.juega()
+
+    print("\n=== Juego Solo Números Impares ===")
+    juego3 = JuegoAdivinaImpar(3)
+    juego3.juega()
 
 if __name__ == "__main__":
     main()
