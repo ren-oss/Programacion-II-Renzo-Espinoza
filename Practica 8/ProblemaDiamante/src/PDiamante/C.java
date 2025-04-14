@@ -1,41 +1,25 @@
 package PDiamante;
 
-public class C implements A, B {
-	private int x;
-    private int y;
-    private int z;
+public class C extends A {
+	// Java no soporta herencia múltiple, así que usamos composición para B
+    private B b;
     
-    public C() {
-        this.x = 5;
-        this.y = 10;
-        
-        // Incrementos mostrados en el diagrama
-        this.x = this.x + 1;
-        this.x = this.x + 1;
-        
-        this.y = this.y + 1;
-        this.y = this.y + 1;
-        
-        this.x = this.x + 1;
-        this.y = this.y + 1;
-        
-        metodo1();
-        metodo2();
+    public C(int x, int y) {
+        super(x);
+        this.b = new B(y);
+    }
+    
+    public void metodo() {
+        this.x += 1;
+        this.b.metodo2(); // Incrementa y
+    }
+    
+    public void metodo2() {
+        this.b.metodo2();
     }
     
     @Override
-    public void metodo1() {
-        System.out.println("Método 1 implementado en C");
-    }
-    
-    // Resolución del conflicto en metodo3()
-    @Override
-    public void metodo3() {
-        A.super.metodo3(); // Puedes elegir cuál implementación usar
-        // o proporcionar una nueva implementación
-    }
-    
-    public static void main(String[] args) {
-        C c = new C();
+    public String toString() {
+        return "x = " + this.x + ", y = " + this.b.y;
     }
 }
