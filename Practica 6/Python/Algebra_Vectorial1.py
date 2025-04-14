@@ -78,13 +78,13 @@ class AlgebraVectorial:
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    v1 = AlgebraVectorial(1, 0)
-    v2 = AlgebraVectorial(0, 1)
+    v1 = AlgebraVectorial(1, 2, 3)
+    v2 = AlgebraVectorial(-2, 1 , 0)
     
     print("¿Son perpendiculares (método 1)?", v1.perpendicular_a(v2, 1))
     print("¿Son perpendiculares (método 3)?", v1.perpendicular_a(v2, 3))
     
-    v3 = AlgebraVectorial(2, 0, 0)
+    v3 = AlgebraVectorial(2, 0, 6)
     print("¿Son paralelos (método 1)?", v1.paralelo_a(v3, 1))
     print("¿Son paralelos (método 2)?", v1.paralelo_a(v3, 2))
     
