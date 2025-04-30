@@ -6,10 +6,10 @@ public class Aplicacion {
         /* 
         JuegoAdivinaPar juego2 = new JuegoAdivinaPar(3);
         JuegoAdivinaImpar juego3 = new JuegoAdivinaImpar(3);
-*/
+        */
         System.out.println("=== Juego Normal ===");
         juego1.juega();
-/* 
+        /* 
         System.out.println("\n=== Juego Solo Números Pares ===");
         juego2.juega();
         
