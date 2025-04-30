@@ -72,8 +72,8 @@ class Vector3D:
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    a = Vector3D(1, 2, 3)
-    b = Vector3D(4, 5, 6)
+    a = Vector3D(2, 5)
+    b = Vector3D(4, 10)
     
     # Suma de vectores
     c = a + b
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     
     # Producto cruz
     cruz = a % b
-    print(f"Producto cruz: {a} × {b} = {cruz}")
+    print(f"Producto Vectorial: {a} × {b} = {cruz}")
     
     # Normalización
     norm = a.normalizar()

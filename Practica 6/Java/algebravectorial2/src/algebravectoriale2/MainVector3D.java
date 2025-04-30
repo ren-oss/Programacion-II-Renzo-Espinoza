@@ -3,7 +3,7 @@ package algebravectoriale2;
 public class MainVector3D {
     public static void main(String[] args) {
         Vector3D a = new Vector3D(1, 2, 3);
-        Vector3D b = new Vector3D(4, 5, 6);
+        Vector3D b = new Vector3D(-2, 1, 0);
         
         // Suma de vectores
         Vector3D c = a.sumar(b);
@@ -17,9 +17,9 @@ public class MainVector3D {
         double punto = a.productoPunto(b);
         System.out.println("Producto punto: " + a + " · " + b + " = " + punto);
         
-        // Producto cruz
+        // Producto cruz (Vectorial) 
         Vector3D cruz = a.productoCruz(b);
-        System.out.println("Producto cruz: " + a + " × " + b + " = " + cruz);
+        System.out.println("Producto vectorial: " + a + " × " + b + " = " + cruz);
         
         // Normalización
         Vector3D norm = a.normalizar();
