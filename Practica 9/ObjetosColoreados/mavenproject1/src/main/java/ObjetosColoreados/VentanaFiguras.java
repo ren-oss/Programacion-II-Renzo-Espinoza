@@ -5,6 +5,7 @@
 package ObjetosColoreados;
 
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
@@ -12,6 +13,7 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 /**
  *
  * @author Renzo
